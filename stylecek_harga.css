@@ -1,0 +1,46 @@
+body {
+    font-family: 'Times New Roman';
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #f48023;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.login-box {
+    background-color: #fff;
+    border: 1px solid #f48023;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff6600;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #f48120;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    }

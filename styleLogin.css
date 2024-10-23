@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.header {
+    background-color: #f48023;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.login-box {
+    background-color: #fff;
+    border: 1px solid #f48023;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #f48023;
+    border: none;
+}
+.footer {
+    background-color: #f48120;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
