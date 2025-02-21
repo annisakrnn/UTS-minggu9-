@@ -1,13 +1,14 @@
 <?php
+//memulai sesi
 session_start();
-
+//menyimpan variabel yang akan diambil pada sesi login
 $validUsername = "admin";
 $validPassword = "admin123"; 
-
+//mrngiriimkan data dengan post
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-
+//memvalidasi
     if ($username === $validUsername && $password === $validPassword) {
         $_SESSION['username'] = $username;
         header("Location: home.php");
@@ -28,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="js/bootstrap.min.css">
 </head>
 <body>
+    <!--membuat form-->
     <div class="container">
         <div class="header text-center">
             <h1>ABC Hotel</h1>

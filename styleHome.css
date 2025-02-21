@@ -1,8 +1,10 @@
+/*mengatur di semua halaman home*/
 body {
     font-family: 'Times New Roman';
     margin: 0;
     padding: 0;
 }
+/*header abc*/
 .header {
     background-color: #f48120;
     color: white;
@@ -11,16 +13,19 @@ body {
     padding-left: 20px;
     font-size: 24px;
 }
+/*navbar*/
 .nav-links {
     float: right;
     margin-right: 20px;
 }
+/*navbar*/
 .nav-links a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
 }
+/*banner*/
 .banner {
     padding-top: 20px 0;
     padding-right: 0;

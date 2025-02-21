@@ -1,16 +1,17 @@
 <?php
+//memulai sesi
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
-
+//menyimpan nilai harga
 $harga_per_hari = [
     "Standard" => 300000,
     "Deluxe" => 400000,
     "Superior" => 500000
 ];
-
+//menyimpan harga
 $diskon_member = 0.1; 
 $diskon_hut = 100000; 
 
@@ -19,14 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tipe = $_POST['type'];
     $jumlah_hari = $_POST['jumlah_hari'];
     $diskon = $_POST['diskon'];
-
+//menghitung harga
     $harga_per_hari_tipe = $harga_per_hari[$tipe];
     $total = $harga_per_hari_tipe * $jumlah_hari;
 
     if ($lantai == 6) {
         $total += 50000; 
     }
-
+//menghitung diskon
     if ($diskon == "Member") {
         $total_diskon = $total * $diskon_member;
     } elseif ($diskon == "Promo HUT") {
@@ -34,11 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $total_diskon = 0;
     }
-
+//menghitung total akhir jjika mendapat diskon
     $total_bayar = $total - $total_diskon;
 }
 ?>
-
+<!--form isi-->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -82,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <button type="submit" class="btn btn-primary">CHECK</button>
         </form>
-
+<!--penghitungan-->
         <?php if (isset($total_bayar)): ?>
         <h3>Total Transaksi: Rp <?php echo number_format($total, 0, ',', '.'); ?></h3>
         <h3>Total Diskon: Rp <?php echo number_format($total_diskon, 0, ',', '.'); ?></h3>

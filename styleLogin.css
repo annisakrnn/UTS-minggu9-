@@ -1,14 +1,15 @@
-body {
+/*backround*/
+body { 
     background-color: #f8f8f8;
 }
-
+/*header abc*/
 .header {
     background-color: #f48023;
     padding: 20px;
     color: white;
     text-align: center;
 }
-
+/*form login*/
 .login-box {
     background-color: #fff;
     border: 1px solid #f48023;
@@ -20,11 +21,12 @@ body {
     margin-right: auto;
     width: 100%;
 }
-
+/*submit*/
 .btn-primary {
     background-color: #f48023;
     border: none;
 }
+/*footter bawah*/
 .footer {
     background-color: #f48120;
     color: white;
